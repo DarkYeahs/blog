@@ -22,6 +22,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.ts'],
     alias: {
+      'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
     }
   },
@@ -83,7 +84,7 @@ module.exports = {
       },
       {
         test: /\.ts$/,
-        loader: 'awesome-typescript-loader'
+        loader: 'ts-loader'
       }
     ]
   }

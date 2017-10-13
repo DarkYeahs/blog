@@ -14,10 +14,10 @@
 		],
 		"no-var-keyword": true,
 		"quotemark": [true,
-			"double",
+			"single",
 			"avoid-escape"
 		],
-		"semicolon": [true, "always"],
+		"semicolon": [false, "always"],
 		"whitespace": [true,
 			"check-branch",
 			"check-decl",

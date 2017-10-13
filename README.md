@@ -1,6 +1,6 @@
-# demo
+# blog
 
-> demo
+> yeahs'sBlog
 
 ## Build Setup
 
