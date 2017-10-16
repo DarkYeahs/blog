@@ -5,7 +5,8 @@ export default class LoginService extends BaseService {
     super(opt)
   }
 
-  login (account: string, password: string) {
+  login (account: String, password: String) {
     console.log(account, password)
+    return this.ajax()
   }
 }

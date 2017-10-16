@@ -1,5 +1,6 @@
 import {
-  ajax
+  ajax,
+  extend
 } from 'zepto'
 
 export default class BaseService {
@@ -14,6 +15,17 @@ export default class BaseService {
     this.defaultOpt = defaultOpt
   }
 
-  ajax (opt: Object = {}) {
+  ajax (opt: any = {errorHandle: false}) {
+    let promise = new Promise((resolve, reject) => {
+      let _opt = {
+        success: data => {
+          resolve(data)
+        },
+        error: (respone, error) => {
+          if (!opt.errorHandle) {}
+          else reject(respone)
+        }
+      }
+    })
   }
 }
