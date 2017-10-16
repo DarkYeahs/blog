@@ -25,7 +25,7 @@ import './style.scss';
 
 // //
 Vue.use(VueRouter);
-// //
+//
 let logLevel = (Config.debug ? Logger.DEBUG : Logger.ERROR);
 Logger.useDefaults();
 Logger.setLevel(logLevel);

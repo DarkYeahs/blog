@@ -10,6 +10,18 @@ html, body {
   color: #333333;
   background-color: #fff;
 }
+html,body,div,p,a {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: 1rem + .6 / $i;
+    margin: .4rem 0; 
+  }
+}
 
 .app {
   min-height: 100%;

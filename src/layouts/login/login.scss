@@ -1,0 +1,63 @@
+@import "../../styles/variables.scss";
+.login-container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 50%;
+  min-height: 50vh;
+  height: auto;
+  padding: 5px 15px;
+  .login-content {
+    position: absolute;
+    left: -50%;
+    width: 100%;
+    height: auto;
+    padding: 35px 15px;
+    box-shadow: #eee 5px 5px 15px,
+    #eee -5px -5px 15px;
+    .login-title {
+      margin: 15px 0;
+      font-size: $fontSize * 2;
+      text-align: center;
+    }
+    .login-form {
+      width: 50%;
+      margin: 0 auto;
+    }
+    .form-item {
+      margin: 10px 0;
+      .form-item__name {
+        display: inline-block;
+        width: 5rem;
+        padding: 0 5px;
+        text-align: right;
+      }
+      .form-item__input {
+        display: inline-block;
+        input {
+          width: 12rem;
+          padding: 5px 15px;
+          border: 1px solid #eee;
+          border-radius: 3px;
+          font-size: $fontSize;
+          outline: none;
+          &:focus {
+            box-shadow: #eee 1px 1px 10px,#eee -1px -1px 10px;
+          }
+        }
+      }
+      .form-item__button {
+        display: inline-block;
+        padding: 5px 15px;
+        border: 0;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #000;
+        outline: none;
+      }
+    }
+    .form-item--center {
+      text-align: center;
+    }
+  }
+}
