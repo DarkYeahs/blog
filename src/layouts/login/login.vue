@@ -1,4 +1,3 @@
-<!-- <template lang="html"> -->
   <div class="container">
     <div class="login-container">
       <div class="login-content">
@@ -24,4 +23,3 @@
       </div>
     </div>
   </div>
-<!-- </template> -->

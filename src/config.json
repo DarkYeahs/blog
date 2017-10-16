@@ -1,5 +1,6 @@
 {
     "version": "1.0.0",
     "build": "1",
-    "debug": false
+    "debug": false,
+    "baseUrl": "http://localhost:3000"
 }

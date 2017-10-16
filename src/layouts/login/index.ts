@@ -1,4 +1,9 @@
-// import Vue from 'vue'
+/*
+*  @create Date:2017-10-16 Monday
+*  @author: Yeahs
+*  @email: yeahschen@gmail.com
+*/
+
 import {
   mapGetters,
   mapActions
@@ -24,7 +29,7 @@ import './login.scss'
 
 const temp: string = template.toString()
 const loginService: LoginService = new LoginService()
-
+console.log(temp)
 @Component({
   template: temp
 })
@@ -41,13 +46,17 @@ export default class Login extends Vue {
   getAccount (val: string, oldVal: string) {
     console.log(val)
   }
+
   mounted () {
     this.setTokenAction('test2')
     console.log(this.token)
     console.log('mounted')
   }
+
   login () {
     this.service.login(this.account, this.password)
-    console.log(this.account, this.password)
+      .then(data => {
+        console.log(data)
+      })
   }
 }
