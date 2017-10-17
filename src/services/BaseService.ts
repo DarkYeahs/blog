@@ -39,7 +39,7 @@ export default class BaseService {
         dataType: 'json',
         timeout: 15 * 1000,
         success: data => {
-          if (data.code === 0) resolve(data)
+          if (data.code === 0) resolve(data.data)
         },
         error: (respone, error) => {
           if (!opt.errorHandle) {}

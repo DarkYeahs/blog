@@ -19,8 +19,7 @@ import {
   namespace
 } from 'vuex-class'
 
-const accountGetter = namespace('account', Getter)
-const accountAction = namespace('account', Action)
+import VerificationCode from '../../components/VerificationCode/index'
 
 import LoginService from '../../services/LoginService'
 
@@ -29,15 +28,22 @@ import './login.scss'
 
 const temp: string = template.toString()
 const loginService: LoginService = new LoginService()
-console.log(temp)
+
+const accountGetter = namespace('account', Getter)
+const accountAction = namespace('account', Action)
+
 @Component({
-  template: temp
+  template: temp,
+  components: {
+    VerificationCode
+  }
 })
 export default class Login extends Vue {
 
   account: string = '';
   password: string = '';
   service: LoginService = loginService;
+  verification: boolean = false
 
   @accountGetter('getToken') token
   @accountAction('SET_TOKEN') setTokenAction
@@ -46,17 +52,33 @@ export default class Login extends Vue {
   getAccount (val: string, oldVal: string) {
     console.log(val)
   }
+  @Watch('verification')
+  verificationChange (val: string) {
+    console.log(val)
+  }
 
   mounted () {
     this.setTokenAction('test2')
-    console.log(this.token)
-    console.log('mounted')
   }
 
   login () {
+    if (this.password === '' || this.account === '') {
+      alert('账号密码不能为空')
+      return
+    }
+    if (!this.verification) {
+      alert('验证码错误，请重新输入')
+      return
+    }
     this.service.login(this.account, this.password)
       .then(data => {
         console.log(data)
       })
   }
+
+  reset () {
+    this.account = ''
+    this.password = ''
+  }
+
 }

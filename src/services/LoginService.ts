@@ -39,7 +39,6 @@ export default class LoginService extends BaseService {
       type: 'POST'
     })
   }
-
   /**
    * [getVerificationCode 获取验证码请求]
    * @return {Promise<any>} [返回promise，将结果交给上一层处理]

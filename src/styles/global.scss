@@ -10,7 +10,7 @@ html, body {
   color: #333333;
   background-color: #fff;
 }
-html,body,div,p,a {
+html,body,div,p,a,span,input {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -19,7 +19,19 @@ html,body,div,p,a {
 @for $i from 1 through 6 {
   h#{$i} {
     font-size: 1rem + .6 / $i;
-    margin: .4rem 0; 
+    margin: .4rem 0;
+  }
+}
+
+
+input {
+  padding: 5px 15px;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  font-size: $fontSize;
+  outline: none;
+  &:focus {
+    box-shadow: #eee 1px 1px 10px,#eee -1px -1px 10px;
   }
 }
 
