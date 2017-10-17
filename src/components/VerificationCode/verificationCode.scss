@@ -1,0 +1,17 @@
+.verification-container {
+  display: flex;
+  > * {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+  }
+  .verification-name {
+    padding: 0 5px;
+  }
+  .verification-input {
+    padding: 0 1rem;
+    input {
+      width: 5rem;
+    }
+  }
+}

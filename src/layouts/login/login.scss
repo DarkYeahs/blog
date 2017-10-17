@@ -1,3 +1,9 @@
+/*
+*  @create Date:2017-10-16 Monday
+*  @author: Yeahs
+*  @email: yeahschen@gmail.com
+*/
+
 @import "../../styles/variables.scss";
 .login-container {
   position: absolute;
@@ -36,14 +42,6 @@
         display: inline-block;
         input {
           width: 12rem;
-          padding: 5px 15px;
-          border: 1px solid #eee;
-          border-radius: 3px;
-          font-size: $fontSize;
-          outline: none;
-          &:focus {
-            box-shadow: #eee 1px 1px 10px,#eee -1px -1px 10px;
-          }
         }
       }
       .form-item__button {

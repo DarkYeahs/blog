@@ -3806,6 +3806,10 @@ istanbul@^0.4.0:
     which "^1.1.1"
     wordwrap "^1.0.0"
 
+jquery@1.11.0:
+  version "1.11.0"
+  resolved "http://registry.npm.taobao.org/jquery/download/jquery-1.11.0.tgz#c67ceee19b403650d682adcf39d5c9009814d949"
+
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.3.2"
   resolved "http://registry.npm.taobao.org/js-base64/download/js-base64-2.3.2.tgz#a79a923666372b580f8e27f51845c6f7e8fbfbaf"
