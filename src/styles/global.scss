@@ -35,6 +35,11 @@ input {
   }
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .app {
   min-height: 100%;
 }
@@ -58,7 +63,6 @@ input {
   opacity: 0;
   transform: translate3d(20px, 0, 0);
 }
-
 
 
 // --------------

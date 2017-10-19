@@ -1,0 +1,43 @@
+:global(.sidebar) {
+  max-width: 240px;
+  height: 100%;
+  background-color: #fff;
+  .sidebar-header {
+    padding-top: 15px;
+    border-bottom: 1px solid #eee;
+    background-color: rgba(0, 0, 0, .7);
+    background-image: url('http://img1.gamedog.cn/2011/12/08/14-11120Q10441.jpg');
+    background-size: 100% 100%;
+    .sidebar-avatar {
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+    .sidebar-motto {
+      margin-top: 15px;
+      p {
+        padding: 5px 15px;
+        font-size: 1.0rem;
+        color: #b3b3b3;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+  .sidebar-body {
+    .menu-list {
+      padding: 0;
+      margin-top: 0;
+      .menu-item {
+        padding: 10px 15px;
+        cursor: pointer;
+        &:hover {
+          background-color: #ddd;
+        }
+      }
+    }
+  }
+}
