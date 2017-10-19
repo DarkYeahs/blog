@@ -20,6 +20,8 @@ import {
 } from 'vuex-class'
 
 import VerificationCode from '../../components/VerificationCode/index'
+import yFormItem from '../../components/formItem'
+import yInput from '../../components/input'
 
 import LoginService from '../../services/LoginService'
 
@@ -31,19 +33,64 @@ const loginService: LoginService = new LoginService()
 
 const accountGetter = namespace('account', Getter)
 const accountAction = namespace('account', Action)
-
+console.log(new yInput())
 @Component({
   template: temp,
   components: {
-    VerificationCode
+    VerificationCode,
+    yFormItem,
+    yInput
   }
 })
 export default class Login extends Vue {
 
   account: string = '';
   password: string = '';
+  testInput: string = ''
   service: LoginService = loginService;
   verification: boolean = false
+  testTree: any = [
+    {
+        label: '1',
+        value: '1',
+        children: [
+            {
+                label: '2',
+                value: '2',
+                children: [
+                    {
+                        label: '3',
+                        value: '3'
+                    }
+                ]
+            },
+            {
+                label: '4',
+                value: '4'
+            }
+        ]
+    },
+    {
+        label: '1',
+        value: '1',
+        children: [
+            {
+                label: '2',
+                value: '2',
+                children: [
+                    {
+                        label: '3',
+                        value: '3'
+                    },
+                    {
+                        label: '4',
+                        value: '4'
+                    }
+                ]
+            }
+        ]
+    }
+  ]
 
   @accountGetter('getToken') token
   @accountAction('SET_TOKEN') setTokenAction
@@ -54,6 +101,10 @@ export default class Login extends Vue {
   }
   @Watch('verification')
   verificationChange (val: string) {
+    console.log(val)
+  }
+  @Watch('testInput')
+  testInputChange(val) {
     console.log(val)
   }
 
@@ -72,7 +123,7 @@ export default class Login extends Vue {
     }
     this.service.login(this.account, this.password)
       .then(data => {
-        console.log(data)
+        this.$router.push('/')
       })
   }
 

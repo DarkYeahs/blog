@@ -52,6 +52,12 @@
         color: #fff;
         background-color: #000;
         outline: none;
+        &:hover {
+          opacity: 0.8
+        }
+        &:active {
+          opacity: 1.0
+        }
       }
     }
     .form-item--center {
