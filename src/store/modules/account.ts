@@ -4,7 +4,11 @@
 *  @email: yeahschen@gmail.com
 */
 const state = {
-  token: 'test'
+  token: 'test',
+  user: {
+    name: '',
+    email: ''
+  }
 }
 
 const mutations = {
