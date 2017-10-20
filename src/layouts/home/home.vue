@@ -1,3 +1,3 @@
 <div class="home">
-  <sidebar></sidebar>
+  <sidebar :user="userInfo"></sidebar>
 </div>

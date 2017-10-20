@@ -1,10 +1,10 @@
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="sidebar-avatar">
-      <img src="../../assets/images/avator.jpg" alt="">
+      <img :src="user.avator" alt="">
     </div>
     <div class="sidebar-motto">
-      <p>测试中。。。</p>
+      <p>{{user.motto}}</p>
     </div>
   </div>
   <div class="sidebar-body">

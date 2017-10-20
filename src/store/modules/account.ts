@@ -5,27 +5,45 @@
 */
 const state = {
   token: 'test',
-  user: {
-    name: '',
-    email: ''
+  userInfo: {
+    account: '',
+    userName: '',
+    password: '',
+    email: '',
+    avator: '',
+    motto: ''
   }
 }
 
 const mutations = {
   SET_TOKEN (state, token) {
     state.token = token
+  },
+
+  SET_USER_INFO (state, userInfo) {
+    console.log(userInfo)
+    state.userInfo = userInfo
   }
 }
 
 const actions = {
   SET_TOKEN ({commit}, token) {
     commit('SET_TOKEN', token)
+  },
+
+  SET_USER_INFO ({commit}, userInfo) {
+    commit('SET_USER_INFO', userInfo)
   }
 }
 
 const getters = {
   getToken (state) {
     return state.token
+  },
+
+  getUserInfo (state) {
+    console.log(state.userInfo)
+    return state.userInfo
   }
 }
 

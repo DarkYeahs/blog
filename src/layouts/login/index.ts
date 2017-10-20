@@ -5,14 +5,11 @@
 */
 
 import {
-  mapGetters,
-  mapActions
-} from 'vuex'
-import {
   Vue,
   Component,
   Watch
 } from 'vue-property-decorator'
+
 import {
   Getter,
   Action,
@@ -49,51 +46,10 @@ export default class Login extends Vue {
   testInput: string = ''
   service: LoginService = loginService;
   verification: boolean = false
-  testTree: any = [
-    {
-        label: '1',
-        value: '1',
-        children: [
-            {
-                label: '2',
-                value: '2',
-                children: [
-                    {
-                        label: '3',
-                        value: '3'
-                    }
-                ]
-            },
-            {
-                label: '4',
-                value: '4'
-            }
-        ]
-    },
-    {
-        label: '1',
-        value: '1',
-        children: [
-            {
-                label: '2',
-                value: '2',
-                children: [
-                    {
-                        label: '3',
-                        value: '3'
-                    },
-                    {
-                        label: '4',
-                        value: '4'
-                    }
-                ]
-            }
-        ]
-    }
-  ]
 
   @accountGetter('getToken') token
   @accountAction('SET_TOKEN') setTokenAction
+  @accountAction('SET_USER_INFO') setUserInfo
 
   @Watch('account')
   getAccount (val: string, oldVal: string) {
@@ -123,6 +79,8 @@ export default class Login extends Vue {
     }
     this.service.login(this.account, this.password)
       .then(data => {
+        console.log(data)
+        this.setUserInfo(data)
         this.$router.push('/')
       })
   }

@@ -40,6 +40,7 @@ export default class BaseService {
         timeout: 15 * 1000,
         success: data => {
           if (data.code === 0) resolve(data.data)
+          else alert(data.msg)
         },
         error: (respone, error) => {
           if (!opt.errorHandle) {}
